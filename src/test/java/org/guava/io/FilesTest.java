@@ -8,6 +8,7 @@ import com.google.common.io.CharSink;
 import com.google.common.io.FileWriteMode;
 import com.google.common.io.Files;
 import com.google.common.io.LineProcessor;
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -70,11 +71,11 @@ public class FilesTest {
      */
     @Test
     public void testToProcessString() throws IOException {
-
+/**/
         LineProcessor<List<Integer>> lineProcessor = new LineProcessor<List<Integer>>() {
             private final List<Integer> lengthList = new ArrayList<>();
             @Override
-            public boolean processLine(String line) throws IOException {
+            public boolean processLine(@NotNull String line) throws IOException {
                 if(line.length()==77) return false;
                 lengthList.add(line.length());
                 return true;
