@@ -42,10 +42,4 @@ public class StringsTest {
 
 
     }
-
-    public static void main(String[] args) {
-        System.out.println(CharMatcher.inRange('a','z')
-                .trimAndCollapseFrom("  ab哈哈哈我ed字串拉z  ",'T'));
-
-    }
 }
